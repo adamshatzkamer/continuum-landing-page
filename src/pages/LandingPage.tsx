@@ -345,7 +345,7 @@ export default function LandingPage() {
         id="landing-hero"
         className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[24px] items-center left-1/2 top-[190px] w-[776px] scroll-mt-28"
       >
-        <div className="relative flex h-[200px] w-full shrink-0 flex-col items-center justify-center gap-4 overflow-hidden px-2 text-center">
+        <div className="relative flex min-h-[200px] w-full shrink-0 flex-col items-center justify-center gap-4 px-2 text-center">
           <h1 className="max-w-[680px] text-balance text-[#0b191f]">
             <span
               className="font-continuum bg-clip-text text-[62px] leading-[1.04] italic text-transparent"
@@ -525,7 +525,7 @@ export default function LandingPage() {
                         </LucideChevronDownBackgroundImage>
                       </div>
                     </div>
-                    <button className="cursor-pointer relative rounded-[883.738px] shrink-0 size-[51.744px]" data-name="Component 139">
+                    <button aria-label="Stop timer" className="cursor-pointer relative rounded-[883.738px] shrink-0 size-[51.744px]" data-name="Component 139">
                       <div className="flex flex-row items-center justify-center size-full">
                         <div className="content-stretch flex gap-[10.78px] items-center justify-center p-[12.936px] relative size-full">
                           <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[rgba(235,67,53,0.1)] left-1/2 rounded-[21.231px] size-[51.744px] top-1/2" />

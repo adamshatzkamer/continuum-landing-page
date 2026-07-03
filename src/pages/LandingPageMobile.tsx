@@ -16,7 +16,7 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 /** Hero panel images under `public/landing/`. */
 const imgWip = "/landing/hero-wip-left.webp";
 const imgWip1 = "/landing/hero-wip-right.webp";
-const imgWip2 = "/landing/hero-wip-center.webp";
+const imgWip2 = "/landing/hero-wip-center-sm.webp";
 
 function MobileWaitlistForm() {
   const [email, setEmail] = useState("");
@@ -421,7 +421,7 @@ function Frame33() {
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[6.171px] items-center pl-[6.171px] relative w-full">
           <Frame151 />
-          <button className="content-stretch cursor-pointer flex gap-[6.824px] items-center justify-center p-[8.188px] relative rounded-[883.738px] shrink-0 size-[32.753px]" data-name="Component 139">
+          <button aria-label="Stop timer" className="content-stretch cursor-pointer flex gap-[6.824px] items-center justify-center p-[8.188px] relative rounded-[883.738px] shrink-0 size-[32.753px]" data-name="Component 139">
             <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[rgba(235,67,53,0.1)] left-1/2 rounded-[21.231px] size-[32.753px] top-1/2" />
             <LucideSquare1 />
           </button>
@@ -1172,7 +1172,7 @@ export default function LandingPageMobile() {
       <Frame127 />
       <div
         id="landing-hero"
-        className="-translate-x-1/2 absolute left-1/2 top-[110px] flex h-[150px] w-[min(calc(100%-32px),360px)] scroll-mt-28 flex-col items-center justify-start gap-3 overflow-hidden px-2 text-center"
+        className="-translate-x-1/2 absolute left-1/2 top-[110px] flex min-h-[150px] w-[min(calc(100%-32px),360px)] scroll-mt-28 flex-col items-center justify-start gap-3 px-2 text-center"
       >
         <h1 className="min-h-0 w-full max-w-[307px] text-balance text-[#0b191f]">
           <span
