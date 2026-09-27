@@ -124,15 +124,9 @@ export default function FaqSection({ variant, className }: FaqSectionProps) {
         <SectionHeader
           variant={variant}
           size="lg"
-          label="Security & Compliance"
-          heading={
-            <>
-              Built for teams that can't afford
-              <br />
-              to get security wrong.
-            </>
-          }
-          body="POPIA compliance isn't a checkbox added after the fact. It's built into how Continuum stores, logs, and manages your data” so your legal team has what they need before they ask."
+          label="FAQ"
+          heading="Frequently asked questions"
+          body="Answers to common questions about security, migration, and getting started with Continuum."
         />
 
         <div className="flex w-full flex-col gap-[24px]">
