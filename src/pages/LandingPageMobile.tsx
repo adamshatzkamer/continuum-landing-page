@@ -181,7 +181,7 @@ function Frame4() {
     <footer className="relative z-10 flex w-full flex-col items-center gap-6 pt-2 text-center not-italic">
       <div className="flex flex-col items-center gap-[6px]">
         <p className="font-continuum relative shrink-0 text-[#0b191f] text-[28.551px] leading-[32.012px] tracking-[-0.571px]">Continuum</p>
-        <p className="font-['Sathu:Regular',sans-serif] relative shrink-0 text-[10.38px] leading-[normal] tracking-[-0.1038px] text-[#252014] opacity-80">
+        <p className="font-['Satoshi:Regular',sans-serif] relative shrink-0 text-[10.38px] leading-[normal] tracking-[-0.1038px] text-[#252014] opacity-80">
           Time track with one click.
         </p>
       </div>

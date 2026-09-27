@@ -902,7 +902,7 @@ export default function LandingPage() {
             className="content-stretch flex min-w-0 flex-col items-center not-italic text-center whitespace-nowrap scroll-mt-28"
           >
             <p className="font-continuum leading-[47.662px] relative shrink-0 text-[#0b191f] text-[42.509px] tracking-[-0.8502px]">Continuum</p>
-            <p className="font-['Sathu:Regular',sans-serif] leading-[normal] opacity-80 relative shrink-0 text-[#252014] text-[15.458px] tracking-[-0.1546px]">Time track with one click.</p>
+            <p className="font-['Satoshi:Regular',sans-serif] leading-[normal] opacity-80 relative shrink-0 text-[#252014] text-[15.458px] tracking-[-0.1546px]">Time track with one click.</p>
           </div>
           <div className="shrink-0">
             <ComponentBackgroundImageAndText1 text="Join Waitlist" />
