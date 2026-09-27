@@ -17,7 +17,7 @@ const FAQS_BY_TAB: Faq[][] = [
     {
       question: "Is Continuum POPIA compliant?",
       answer:
-        "Yes. Continuum is built with South Africa's Protection of Personal Information Act (POPIA) in mind. Our Privacy Policy explains how we collect, use, and protect personal information, your rights under POPIA, and how to reach our Information Officer at info@joincontinuum.co.za. We apply appropriate technical and organisational safeguards, including encryption in transit, role-based access controls, and retention practices aligned with POPIA.",
+        "Yes. Continuum is built with South Africa's Protection of Personal Information Act (POPIA) in mind. Our Privacy Policy explains how we collect, use, and protect personal information, your rights under POPIA, and how to reach our Information Officer at info@continuityos.co.za. We apply appropriate technical and organisational safeguards, including encryption in transit, role-based access controls, and retention practices aligned with POPIA.",
     },
     {
       question: "Who can see my team's sprint board?",

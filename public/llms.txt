@@ -14,7 +14,7 @@ Continuum is currently in private beta. Teams join a waitlist for early access a
 
 ## Security & compliance
 
-Continuum is built with South Africa's Protection of Personal Information Act (POPIA) in mind. Safeguards include encryption in transit, role-based access controls, and POPIA-aligned data retention. Production data runs on managed cloud infrastructure (PostgreSQL and application services deployed via Railway). Sensitive credentials such as OAuth tokens and client API keys are stored encrypted or hashed, never in plaintext. Continuum does not sell personal information. The Information Officer can be reached at info@joincontinuum.co.za.
+Continuum is built with South Africa's Protection of Personal Information Act (POPIA) in mind. Safeguards include encryption in transit, role-based access controls, and POPIA-aligned data retention. Production data runs on managed cloud infrastructure (PostgreSQL and application services deployed via Railway). Sensitive credentials such as OAuth tokens and client API keys are stored encrypted or hashed, never in plaintext. Continuum does not sell personal information. The Information Officer can be reached at info@continuityos.co.za.
 
 ## Key questions
 
@@ -27,7 +27,7 @@ Continuum is built with South Africa's Protection of Personal Information Act (P
 ## Links
 
 - Home / waitlist: https://joincontinuum.co.za
-- Contact / Information Officer: info@joincontinuum.co.za
+- Contact / Information Officer: info@continuityos.co.za
 
 ## Reference
 
