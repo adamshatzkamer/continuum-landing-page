@@ -1127,7 +1127,7 @@ function Frame120() {
 
 function Frame154() {
   return (
-    <div className="relative z-10 mt-[867px] ml-4 flex w-[370px] max-w-[calc(100%-32px)] shrink-0 flex-col gap-[40px] items-start">
+    <div id="landing-features" className="relative z-10 mt-[867px] ml-4 flex w-[370px] max-w-[calc(100%-32px)] shrink-0 flex-col gap-[40px] items-start">
       <Frame121 />
       <Frame119 />
       <Frame120 />

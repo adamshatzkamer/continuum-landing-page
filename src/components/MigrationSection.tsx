@@ -132,6 +132,7 @@ export default function MigrationSection({ variant, className }: MigrationSectio
 
   return (
     <section
+      id="migration"
       ref={ref}
       data-name="Migration"
       className={clsx(

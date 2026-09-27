@@ -55,6 +55,7 @@ export default function SecuritySection({ variant, className }: SecuritySectionP
 
   return (
     <section
+      id="security"
       data-name="Security & compliance"
       className={clsx(
         "flex w-full flex-col items-center",
