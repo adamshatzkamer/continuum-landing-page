@@ -60,7 +60,7 @@ for (const [vpName, viewport] of [["desktop", DESKTOP], ["mobile", MOBILE]]) {
       await submit(page, "probe@example.com");
       const toast = await toastText(page);
       assert(waitlistBodies.length === 1, `expected 1 request, got ${waitlistBodies.length}`);
-      assert(/added to the list/i.test(toast || ""), `toast was ${JSON.stringify(toast)}`);
+      assert(/on the list/i.test(toast || ""), `toast was ${JSON.stringify(toast)}`);
     } finally {
       await ctx.close();
     }
