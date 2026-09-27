@@ -87,6 +87,13 @@ const FAQS_BY_TAB: Faq[][] = [
   ],
 ];
 
+// Questions without answer copy yet (the pricing tab) are hidden, and so is any tab
+// left empty, so no accordion item expands to nothing. Add the answer to show it.
+const VISIBLE_TABS = TABS.map((label, i) => ({
+  label,
+  faqs: (FAQS_BY_TAB[i] ?? []).filter((faq) => faq.answer),
+})).filter((tab) => tab.faqs.length > 0);
+
 export type FaqSectionProps = {
   variant: "desktop" | "mobile";
   className?: string;
@@ -96,7 +103,7 @@ export default function FaqSection({ variant, className }: FaqSectionProps) {
   const isMobile = variant === "mobile";
   const [activeTab, setActiveTab] = useState(0);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const faqs = FAQS_BY_TAB[activeTab] ?? [];
+  const faqs = VISIBLE_TABS[activeTab]?.faqs ?? [];
 
   return (
     <section
@@ -130,7 +137,7 @@ export default function FaqSection({ variant, className }: FaqSectionProps) {
         <div className="flex w-full flex-col gap-[24px]">
           {/* Category tabs */}
           <div className={clsx("flex gap-[8px]", isMobile && "overflow-x-auto pb-1 scrollbar-hide")}>
-            {TABS.map((tab, i) => {
+            {VISIBLE_TABS.map(({ label: tab }, i) => {
               const active = i === activeTab;
               return (
                 <button
