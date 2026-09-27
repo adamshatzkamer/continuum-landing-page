@@ -8,6 +8,8 @@ const baseURL = import.meta.env.VITE_API_BASE_URL || '/api/v1';
 
 const client = axios.create({
   baseURL,
+  // Without a timeout a hung backend leaves the form stuck on "Sending…" forever.
+  timeout: 10_000,
   headers: { 'Content-Type': 'application/json' },
 });
 
