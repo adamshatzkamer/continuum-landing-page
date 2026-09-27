@@ -10,7 +10,15 @@ export default function App() {
 
   useEffect(() => {
     if (window.location.hash) {
-      const el = document.querySelector(window.location.hash);
+      // The hash is user-controlled and often not a valid CSS selector (#1, #/, #a?b),
+      // so look it up as a plain id instead of passing it to querySelector.
+      let id = window.location.hash.slice(1);
+      try {
+        id = decodeURIComponent(id);
+      } catch {
+        // malformed %-escape: fall back to the raw value
+      }
+      const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
       history.replaceState(null, '', window.location.pathname);
     }
