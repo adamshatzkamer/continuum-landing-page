@@ -28,7 +28,7 @@ const PEOPLE: Person[] = [
 
 const ROLES: { title: string; body: string }[] = [
   {
-    title: "Admin",
+    title: "Owner",
     body: "Full control over projects, billing, team, and audit logs. Set roles in minutes as needed.",
   },
   {
@@ -180,7 +180,7 @@ export default function AccessControlSection({ variant, className }: AccessContr
               Not your process.
             </>
           }
-          body="Three roles. No configuration overhead. Admins run the show, members stay focused, and clients get a curated view of milestones nothing behind the curtain."
+          body="Packaged roles. No configuration overhead. Owners run the show, members stay focused, and clients get a curated view of milestones, nothing behind the curtain."
         />
 
         <div
