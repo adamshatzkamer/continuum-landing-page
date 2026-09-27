@@ -7,7 +7,7 @@ const CARDS: { icon: string; title: string; body: string }[] = [
   {
     icon: `${ICON}/icon-command.svg`,
     title: "Owner",
-    body: "Full control over projects, billing, team, and audit logs. Set roles in minutes” no sysadmin needed.",
+    body: "Full control over projects, billing, team, and audit logs. Set roles in minutes — no sysadmin needed.",
   },
   {
     icon: `${ICON}/icon-zap.svg`,
@@ -17,7 +17,7 @@ const CARDS: { icon: string; title: string; body: string }[] = [
   {
     icon: `${ICON}/icon-bar-chart.svg`,
     title: "Repository AI Indexing",
-    body: "Read-only. Milestones and delivery status” a polished view, never the raw sprint board.",
+    body: "Read-only. Milestones and delivery status — a polished view, never the raw sprint board.",
   },
   {
     icon: `${ICON}/icon-shield-check.svg`,
@@ -80,7 +80,7 @@ export default function SecuritySection({ variant, className }: SecuritySectionP
               to get security wrong.
             </>
           }
-          body="POPIA compliance isn't a checkbox added after the fact. It's built into how Continuum stores, logs, and manages your data” so your legal team has what they need before they ask."
+          body="POPIA compliance isn't a checkbox added after the fact. It's built into how Continuum stores, logs, and manages your data — so your legal team has what they need before they ask."
         />
 
         <div

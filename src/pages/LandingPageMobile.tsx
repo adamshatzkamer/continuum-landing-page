@@ -213,7 +213,7 @@ function Frame115() {
       className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[16px] items-center left-1/2 scroll-mt-28 top-[548px] w-[370px] max-w-[calc(100%-32px)]"
     >
       <p className="font-['Satoshi:Medium',sans-serif] leading-[1.04] not-italic relative shrink-0 text-[#0b191f] text-[36px] text-center w-full">Join the Waitlist</p>
-      <p className="font-['Satoshi:Medium',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#606d76] text-[14px] text-center w-full">We’re building a unified space for sprint planning, frictionless time tracking, and instant invoicing-but we need your help to perfect it. Join our exclusive Beta program to get early access, test our core features, and tell us exactly what your team needs to do its best deep work.</p>
+      <p className="font-['Satoshi:Medium',sans-serif] leading-[24px] not-italic relative shrink-0 text-[#606d76] text-[14px] text-center w-full">We’re building a unified space for sprint planning, frictionless time tracking, and instant invoicing — but we need your help to perfect it. Join our exclusive Beta program to get early access, test our core features, and tell us exactly what your team needs to do its best deep work.</p>
       <MobileWaitlistForm />
     </div>
   );

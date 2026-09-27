@@ -6,7 +6,7 @@ import { ChevronRightIcon } from "@/components/LandingIcons";
 const TABS = [
   "Security & Access Control",
   "Migration",
-  "Scaleability & Pricing",
+  "Scalability & Pricing",
   "Getting Started",
 ];
 
