@@ -8,7 +8,12 @@ import SecuritySection from "@/components/SecuritySection";
 import MigrationSection from "@/components/MigrationSection";
 import FaqSection from "@/components/FaqSection";
 import { toast } from "sonner";
-import { postWaitlistSignup } from "@/api/waitlist";
+import {
+  postWaitlistSignup,
+  isValidWaitlistEmail,
+  waitlistErrorMessage,
+  WAITLIST_INVALID_EMAIL_MESSAGE,
+} from "@/api/waitlist";
 import { playWaitlistSuccessSound } from "@/lib/playWaitlistSuccessSound";
 import { scrollToWaitlist } from "@/lib/scrollToWaitlist";
 import { PrimaryButton } from "@/components/PrimaryButton";
@@ -24,15 +29,20 @@ function MobileWaitlistForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    const trimmed = email.trim();
+    if (!isValidWaitlistEmail(trimmed)) {
+      toast.error(WAITLIST_INVALID_EMAIL_MESSAGE);
+      return;
+    }
     setStatus("loading");
     try {
-      await postWaitlistSignup(email.trim());
+      await postWaitlistSignup(trimmed);
       playWaitlistSuccessSound();
       toast.success("You've been added to the list, check your email to confirm");
       setEmail("");
       setStatus("idle");
-    } catch {
-      toast.error("Something went wrong. Please try again in a moment.");
+    } catch (err) {
+      toast.error(waitlistErrorMessage(err));
       setStatus("idle");
     }
   }
