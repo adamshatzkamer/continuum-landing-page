@@ -852,18 +852,18 @@ export default function LandingPage() {
           aria-label="Page sections"
           className="content-stretch flex font-['Satoshi:Medium',sans-serif] gap-[51px] items-center leading-[normal] not-italic relative shrink-0 text-[#606d76] text-[16px] text-center whitespace-nowrap"
         >
-          <span className="relative shrink-0 cursor-default select-none">
+          <a href="#landing-hero" className="relative shrink-0 hover:text-[#0b191f]">
             Overview
-          </span>
-          <span className="relative shrink-0 cursor-default select-none">
+          </a>
+          <a href="#landing-waitlist" className="relative shrink-0 hover:text-[#0b191f]">
             Waitlist
-          </span>
-          <span className="relative shrink-0 cursor-default select-none">
+          </a>
+          <a href="#landing-features" className="relative shrink-0 hover:text-[#0b191f]">
             Features
-          </span>
-          <span className="relative shrink-0 cursor-default select-none">
+          </a>
+          <a href="mailto:info@continuityos.co.za" className="relative shrink-0 hover:text-[#0b191f]">
             Contact
-          </span>
+          </a>
         </nav>
         <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
           <ComponentBackgroundImageAndText1 text="Join Waitlist" />
