@@ -156,6 +156,7 @@ export default function AccessControlSection({ variant, className }: AccessContr
 
   return (
     <section
+      id="access-control"
       data-name="Access control"
       className={clsx(
         "flex w-full flex-col items-center",

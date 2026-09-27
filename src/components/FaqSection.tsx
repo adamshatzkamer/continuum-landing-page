@@ -100,6 +100,7 @@ export default function FaqSection({ variant, className }: FaqSectionProps) {
 
   return (
     <section
+      id="faq"
       data-name="FAQ"
       className={clsx(
         "flex w-full flex-col items-center",

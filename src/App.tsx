@@ -5,15 +5,41 @@ import { useMinWidthMd } from '@/hooks/useMinWidthMd';
 const LandingPage = lazy(() => import('@/pages/LandingPage'));
 const LandingPageMobile = lazy(() => import('@/pages/LandingPageMobile'));
 
+/** Anchors used by the static fallback in index.html / llms.txt that map to in-app ids. */
+const HASH_ALIASES: Record<string, string> = {
+  waitlist: 'landing-waitlist',
+  features: 'landing-features',
+};
+
 export default function App() {
   const isDesktop = useMinWidthMd();
 
   useEffect(() => {
-    if (window.location.hash) {
-      const el = document.querySelector(window.location.hash);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-      history.replaceState(null, '', window.location.pathname);
+    if (!window.location.hash) return;
+    // The hash is user-controlled and often not a valid CSS selector (#1, #/, #a?b),
+    // so look it up as a plain id instead of passing it to querySelector.
+    let id = window.location.hash.slice(1);
+    try {
+      id = decodeURIComponent(id);
+    } catch {
+      // malformed %-escape: fall back to the raw value
     }
+    id = HASH_ALIASES[id] ?? id;
+    // The page is lazy-loaded, so on this first commit the target usually doesn't
+    // exist yet. Retry each frame until it mounts; only strip the hash once scrolled.
+    const deadline = performance.now() + 5000;
+    let frame = 0;
+    const tryScroll = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        history.replaceState(null, '', window.location.pathname);
+      } else if (performance.now() < deadline) {
+        frame = requestAnimationFrame(tryScroll);
+      }
+    };
+    tryScroll();
+    return () => cancelAnimationFrame(frame);
   }, [isDesktop]);
 
   return (
