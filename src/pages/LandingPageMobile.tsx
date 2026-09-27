@@ -421,10 +421,10 @@ function Frame33() {
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[6.171px] items-center pl-[6.171px] relative w-full">
           <Frame151 />
-          <button aria-label="Stop timer" className="content-stretch cursor-pointer flex gap-[6.824px] items-center justify-center p-[8.188px] relative rounded-[883.738px] shrink-0 size-[32.753px]" data-name="Component 139">
+          <div aria-hidden="true" className="content-stretch flex gap-[6.824px] items-center justify-center p-[8.188px] relative rounded-[883.738px] shrink-0 size-[32.753px]" data-name="Component 139">
             <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[rgba(235,67,53,0.1)] left-1/2 rounded-[21.231px] size-[32.753px] top-1/2" />
             <LucideSquare1 />
-          </button>
+          </div>
         </div>
       </div>
     </div>
@@ -671,14 +671,14 @@ function LucidePlus() {
 
 function Component() {
   return (
-    <button className="cursor-pointer flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4.636px]" data-name="Component 4" style={{ backgroundImage: "linear-gradient(176.304deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%)" }}>
+    <div aria-hidden="true" className="flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4.636px]" data-name="Component 4" style={{ backgroundImage: "linear-gradient(176.304deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%)" }}>
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex gap-[4.636px] items-center justify-center px-[9.273px] py-[5.796px] relative size-full">
           <LucidePlus />
           <p className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[8.114px] text-left text-white whitespace-nowrap">Log Time</p>
         </div>
       </div>
-    </button>
+    </div>
   );
 }
 

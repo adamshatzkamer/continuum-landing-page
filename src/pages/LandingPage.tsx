@@ -525,7 +525,7 @@ export default function LandingPage() {
                         </LucideChevronDownBackgroundImage>
                       </div>
                     </div>
-                    <button aria-label="Stop timer" className="cursor-pointer relative rounded-[883.738px] shrink-0 size-[51.744px]" data-name="Component 139">
+                    <div aria-hidden="true" className="relative rounded-[883.738px] shrink-0 size-[51.744px]" data-name="Component 139">
                       <div className="flex flex-row items-center justify-center size-full">
                         <div className="content-stretch flex gap-[10.78px] items-center justify-center p-[12.936px] relative size-full">
                           <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[rgba(235,67,53,0.1)] left-1/2 rounded-[21.231px] size-[51.744px] top-1/2" />
@@ -538,7 +538,7 @@ export default function LandingPage() {
                           </div>
                         </div>
                       </div>
-                    </button>
+                    </div>
                   </BackgroundImage3>
                 </div>
               </div>
@@ -637,7 +637,7 @@ export default function LandingPage() {
                             </div>
                             <div className="content-stretch flex h-[22.591px] items-center justify-end relative shrink-0 w-full">
                               <div className="flex flex-[1_0_0] flex-row items-center self-stretch">
-                                <button className="cursor-pointer flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4.636px]" data-name="Component 4" style={{ backgroundImage: "linear-gradient(176.304deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%)" }}>
+                                <div aria-hidden="true" className="flex-[1_0_0] h-full min-h-px min-w-px relative rounded-[4.636px]" data-name="Component 4" style={{ backgroundImage: "linear-gradient(176.304deg, rgb(36, 181, 248) 123.02%, rgb(85, 33, 254) 802.55%)" }}>
                                   <div className="flex flex-row items-center justify-center size-full">
                                     <div className="content-stretch flex gap-[4.636px] items-center justify-center px-[9.273px] py-[5.796px] relative size-full">
                                       <BackgroundImage10>
@@ -648,7 +648,7 @@ export default function LandingPage() {
                                       <p className="font-['Satoshi:Bold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[8.114px] text-left text-white whitespace-nowrap">Log Time</p>
                                     </div>
                                   </div>
-                                </button>
+                                </div>
                               </div>
                             </div>
                           </div>
