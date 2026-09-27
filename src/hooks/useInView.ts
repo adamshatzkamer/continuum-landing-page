@@ -17,24 +17,23 @@ type InViewOptions = {
  * Respects `prefers-reduced-motion` by reporting `inView` immediately so
  * elements render in their final state without movement.
  */
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 export function useInView<T extends HTMLElement = HTMLElement>(
   options: InViewOptions = {}
 ) {
   const { threshold = 0.3, rootMargin } = options;
   const ref = useRef<T | null>(null);
-  const [inView, setInView] = useState(false);
+  // Reduced motion: start in the final state instead of setting it from the effect.
+  const [inView, setInView] = useState(prefersReducedMotion);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReduced) {
-      setInView(true);
-      return;
-    }
+    if (prefersReducedMotion()) return;
 
     const obs = new IntersectionObserver(
       ([entry]) => {
