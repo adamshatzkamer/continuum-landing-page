@@ -35,7 +35,7 @@ function LandingWaitlistForm() {
     try {
       await postWaitlistSignup(trimmed);
       playWaitlistSuccessSound();
-      toast.success("You've been added to the list, check your email to confirm");
+      toast.success("You're on the list — we'll email you when your spot opens.");
       setEmail("");
       setStatus("idle");
     } catch (err) {
