@@ -158,7 +158,7 @@ export default function MigrationSection({ variant, className }: MigrationSectio
               This one's different.
             </>
           }
-          body="No forced cutover. Your team works in both tools until the switch is done. Zero configuration tax” your first sprint can be live in under an hour."
+          body="No forced cutover. Your team works in both tools until the switch is done. Zero configuration tax — your first sprint can be live in under an hour."
         />
 
         <div

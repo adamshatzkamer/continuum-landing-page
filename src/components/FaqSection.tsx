@@ -6,7 +6,7 @@ import { ChevronRightIcon } from "@/components/LandingIcons";
 const TABS = [
   "Security & Access Control",
   "Migration",
-  "Scaleability & Pricing",
+  "Scalability & Pricing",
   "Getting Started",
 ];
 
@@ -124,7 +124,7 @@ export default function FaqSection({ variant, className }: FaqSectionProps) {
               to get security wrong.
             </>
           }
-          body="POPIA compliance isn't a checkbox added after the fact. It's built into how Continuum stores, logs, and manages your data” so your legal team has what they need before they ask."
+          body="POPIA compliance isn't a checkbox added after the fact. It's built into how Continuum stores, logs, and manages your data — so your legal team has what they need before they ask."
         />
 
         <div className="flex w-full flex-col gap-[24px]">
