@@ -27,7 +27,7 @@ const FAQS_BY_TAB: Faq[][] = [
     {
       question: "Can I control what each team member sees and accesses?",
       answer:
-        "Yes. Continuum uses role-based access control (RBAC) with packaged roles such as Admin, Project Manager, Developer, View Only, and Contractor. Admins can invite members, assign roles, and customise permission bundles per project, including fine-grained controls over sprint views, task editing, time logging, invoicing, and team visibility. Members only see what their role allows.",
+        "Yes. Continuum uses role-based access control (RBAC) with packaged roles: Owner, Project Manager, Developer, Client, View Only, Finance, Sales, and Marketing. Owners and project managers can invite members, assign roles, and customise permission bundles per project, including fine-grained controls over sprint views, task editing, time logging, invoicing, and team visibility. Members only see what their role allows.",
     },
     {
       question: "Where is my data hosted, and who at Continuum can access it?",
@@ -82,7 +82,7 @@ const FAQS_BY_TAB: Faq[][] = [
     {
       question: "Do I need technical setup before inviting my team?",
       answer:
-        "No heavy setup is required. An admin creates the project and sends email invitations, each person gets a role (Admin, Project Manager, Developer, Client, and others) that controls what they see. Integrations like GitHub can be connected from project settings whenever your team is ready.",
+        "No heavy setup is required. The project owner creates the project and sends email invitations, each person gets a role (Project Manager, Developer, Client, View Only, and others) that controls what they see. Integrations like GitHub can be connected from project settings whenever your team is ready.",
     },
   ],
 ];

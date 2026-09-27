@@ -6,7 +6,7 @@ const ICON = "/landing/continuum-ai";
 const CARDS: { icon: string; title: string; body: string }[] = [
   {
     icon: `${ICON}/icon-command.svg`,
-    title: "Admin",
+    title: "Owner",
     body: "Full control over projects, billing, team, and audit logs. Set roles in minutes” no sysadmin needed.",
   },
   {

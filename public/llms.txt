@@ -8,7 +8,7 @@ Continuum is currently in private beta. Teams join a waitlist for early access a
 
 - **Frictionless execution & recording**: Team members click to start tracking time directly on a task — no separate timesheet tool, no manual reconciliation.
 - **Seamless invoicing**: Tracked time flows straight into invoices, removing the need to chase timesheets or reconcile data across disconnected systems.
-- **Role-based access control (RBAC)**: Packaged roles (Admin, Project Manager, Developer, View Only, Contractor) let admins control exactly what each member sees and edits per project. Clients get a curated, read-only view of milestones and progress — never the raw sprint board.
+- **Role-based access control (RBAC)**: Packaged roles (Owner, Project Manager, Developer, Client, View Only, Finance, Sales, and Marketing) let owners and project managers control exactly what each member sees and edits per project. Clients get a curated, read-only view of milestones and progress — never the raw sprint board.
 - **Continuum AI**: A read-only-by-default assistant that handles planning, task drafting, and status updates in the background without changing what is on the sprint board.
 - **Easy migration**: Import existing boards from Jira (CSV), Trello (JSON), Asana (CSV), or generic CSV. No forced cutover — run both tools in parallel, preview the import, adjust mappings, then apply. A first sprint can be live in under an hour.
 
