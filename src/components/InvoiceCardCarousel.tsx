@@ -157,6 +157,8 @@ function InvoiceCard({
 
 const ALL_CARDS = Array.from({ length: COPIES }, () => INVOICE_CARDS).flat();
 
+// The hook drives the strip below and shares its constants; the rule only affects dev HMR.
+// eslint-disable-next-line react-refresh/only-export-components
 export function useInvoiceCarousel() {
   const [step, setStep] = useState(0);
   const [highlightStep, setHighlightStep] = useState(0);

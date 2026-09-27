@@ -21,24 +21,23 @@ type ScrollProgressOptions = {
  * Returns a ref to attach to the element and a `progress` value in [0, 1].
  * Respects `prefers-reduced-motion` by pinning progress to 1 (final state).
  */
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 export function useScrollProgress<T extends HTMLElement = HTMLElement>(
   options: ScrollProgressOptions = {}
 ) {
   const { anchor = 0, start = 1, end = 0.5 } = options;
   const ref = useRef<T | null>(null);
-  const [progress, setProgress] = useState(0);
+  // Reduced motion: start in the final state instead of setting it from the effect.
+  const [progress, setProgress] = useState(() => (prefersReducedMotion() ? 1 : 0));
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReduced) {
-      setProgress(1);
-      return;
-    }
+    if (prefersReducedMotion()) return;
 
     let frame = 0;
     const update = () => {
