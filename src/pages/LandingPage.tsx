@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useId } from "react";
 import clsx from "clsx";
 import { toast } from "sonner";
 import { postWaitlistSignup } from "@/api/waitlist";
@@ -15,6 +15,7 @@ import MigrationSection from "@/components/MigrationSection";
 import FaqSection from "@/components/FaqSection";
 
 function LandingWaitlistForm() {
+  const noteId = useId();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading">("idle");
 
@@ -52,6 +53,7 @@ function LandingWaitlistForm() {
               name="email"
               required
               autoComplete="email"
+              aria-describedby={noteId}
               placeholder="Email address"
               value={email}
               onChange={(ev) => setEmail(ev.target.value)}
@@ -66,6 +68,9 @@ function LandingWaitlistForm() {
           </PrimaryButton>
         </div>
       </div>
+      <p id={noteId} className="font-['Satoshi:Medium',sans-serif] text-[12px] leading-[16px] text-[#606d76] text-center">
+        We only use your email to contact you about Continuum.
+      </p>
     </form>
   );
 }

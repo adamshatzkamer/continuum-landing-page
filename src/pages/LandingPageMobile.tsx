@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useId } from "react";
 import svgPaths from "./landing-mobile-svg";
 import { useInvoiceCarousel, InvoiceCardStrip } from "@/components/InvoiceCardCarousel";
 import ContinuumAiFeatures from "@/components/ContinuumAiFeatures";
@@ -19,6 +19,7 @@ const imgWip1 = "/landing/hero-wip-right.webp";
 const imgWip2 = "/landing/hero-wip-center-sm.webp";
 
 function MobileWaitlistForm() {
+  const noteId = useId();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading">("idle");
 
@@ -56,6 +57,7 @@ function MobileWaitlistForm() {
               name="email"
               required
               autoComplete="email"
+              aria-describedby={noteId}
               placeholder="Email address"
               value={email}
               onChange={(ev) => setEmail(ev.target.value)}
@@ -70,6 +72,9 @@ function MobileWaitlistForm() {
           </PrimaryButton>
         </div>
       </div>
+      <p id={noteId} className="font-['Satoshi:Medium',sans-serif] text-[12px] leading-[16px] text-[#606d76] text-center">
+        We only use your email to contact you about Continuum.
+      </p>
     </form>
   );
 }
