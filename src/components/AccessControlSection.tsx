@@ -111,8 +111,8 @@ function ShareProjectCard({ variant }: { variant: "desktop" | "mobile" }) {
 
       {/* Footer */}
       <div className={clsx("flex items-center justify-end border-t border-[#ebedee] bg-white py-[16px]", padX)}>
-        <button
-          type="button"
+        <div
+          aria-hidden="true"
           className="flex h-[32px] items-center gap-[8px] rounded-[8px] bg-white px-[16px] py-[8px]"
         >
           <LinkIcon className="text-[#24b5f8]" size={16} />
@@ -122,7 +122,7 @@ function ShareProjectCard({ variant }: { variant: "desktop" | "mobile" }) {
           >
             Copy link
           </span>
-        </button>
+        </div>
       </div>
     </div>
   );
