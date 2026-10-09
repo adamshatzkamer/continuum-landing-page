@@ -1,3 +1,13 @@
+---
+title: Bug hunt report (2026-09-26)
+audience: developers
+status: archived
+owner: TBD
+last_reviewed: 2026-10-09
+---
+
+> **Archived.** Open items tracked in [#5](https://github.com/continuum-zar/continuum-landing-page/issues/5) (S2), [#6](https://github.com/continuum-zar/continuum-landing-page/issues/6) (S3), [#7](https://github.com/continuum-zar/continuum-landing-page/issues/7) (S4), [#8](https://github.com/continuum-zar/continuum-landing-page/issues/8) (S5), [#9](https://github.com/continuum-zar/continuum-landing-page/issues/9) (S7) and [#10](https://github.com/continuum-zar/continuum-landing-page/issues/10) (B8 privacy policy follow-up). Everything else is resolved: confirmed bugs B1-B12 (and the later B13, B14) are fixed on `QA`, with regression tests in [`tests/e2e/`](../../tests/e2e/). S1 was fixed in continuum-backend (B56: waitlist signups are now stored), and S6 is fixed. File paths below are relative to the repo root.
+
 # Bug hunt - continuum-landing-page @ a6a07ec - 2026-09-26
 
 Checks run: typecheck ✔ (`tsc -b`, 0 errors; `--noUncheckedIndexedAccess` probe: 4, all benign) · lint ✘ (`eslint .`: 3 errors, 1 warning) · tests: none exist (0/0) · build ✔ (`vite build` to a scratch outDir) · audit ✘ (16 vulns: 1 low, 5 moderate, 10 high; only `axios` ships to the browser) · e2e: none in repo, ad-hoc Playwright probes written (see below)
